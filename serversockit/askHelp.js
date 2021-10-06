@@ -1,7 +1,8 @@
 'use strict'
 require('dotenv').config();
 
-const host = process.env.HOST || "http://localhost:7896"
+const host = "https://jameeey.herokuapp.com"
+// process.env.HOST || "http://localhost:7896"
 //"https://jameeey.herokuapp.com";
 const client = require('socket.io-client');
 const socket = client.connect(host);

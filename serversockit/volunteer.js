@@ -3,7 +3,8 @@
 require('dotenv').config();
 
 const client = require('socket.io-client');
-const host = process.env.HOST || "http://localhost:7896"
+const host = "https://jameeey.herokuapp.com"
+//process.env.HOST || "http://localhost:7896"
 //"https://jameeey.herokuapp.com";
 const socket = client.connect(host);
 const {students}=require('../models/index');
