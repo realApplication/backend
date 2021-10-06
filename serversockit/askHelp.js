@@ -1,7 +1,7 @@
 'use strict'
 require('dotenv').config();
 
-const host = process.env.HOST || "https://jameey.herokuapp.com/";
+const host = process.env.HOST || "https://jameeey.herokuapp.com";
 const client = require('socket.io-client');
 const socket = client.connect(host);
 const {pickedSchema}=require('../models/index')
