@@ -3,15 +3,15 @@ const {counterSchema}=require('../models/index')
 
 const setCounter=async (idbook,counterbook)=>{
     
-    let iddx = idbook.toString();
-    let count = counterbook.toString();
+    // let iddx = idbook.toString();
+    // let count = counterbook.toString();
    
    try {       
-    let counterData = await counterSchema.findOne({where:{idbook:iddx}})
+    let counterData = await counterSchema.findOne({where:{idbook:idbook}})
     let id =  counterData.dataValues.id;
     let data={
-        idbook:iddx,
-        counter:count
+        idbook:idbook,
+        counter:counterbook
     } 
     await counterSchema.update(data,{where:{id:id}})  
     console.log('counter ', data.counter);
